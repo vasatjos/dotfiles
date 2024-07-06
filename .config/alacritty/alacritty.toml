@@ -35,3 +35,9 @@ blue = "#94bff3"
 magenta = "#ec93d3"
 cyan = "#93e0e3"
 white = "#ffffff"
+
+
+[keyboard]
+bindings = [
+  { key = "T", mods = "Control|Shift", action = "SpawnNewInstance" }
+]
