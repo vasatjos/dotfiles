@@ -1,0 +1,37 @@
+[window]
+decorations = "none" # hide title bar
+startup_mode = "Maximized"
+
+
+[font]
+normal = { family = "Hack Nerd Font", style = "Regular" }
+bold = { style = "Bold" }
+italic = { style = "Italic" }
+bold_italic = { style = "Bold Italic" }
+
+
+[colors]
+
+[colors.primary]
+foreground = "#dcdccc"
+background = "#282828"
+
+[colors.normal]
+black = "#3f3f3f"
+red = "#705050"
+green = "#60b48a"
+yellow = "#dfaf8f"
+blue = "#9ab8d7"
+magenta = "#dc8cc3"
+cyan = "#8cd0d3"
+white = "#dcdccc"
+
+[colors.bright]
+black = "#709080"
+red = "#dca3a3"
+green = "#72d5a3"
+yellow = "#f0dfaf"
+blue = "#94bff3"
+magenta = "#ec93d3"
+cyan = "#93e0e3"
+white = "#ffffff"
