@@ -17,11 +17,3 @@ tmux kill-server
 
 # clone nvim submodule
 git submodule update --init --recursive
-
-# install p10k
-if [ -d $HOME/.oh-my-zsh/custom/themes/powerlevel10k ]; then
-    echo "p10k already installed"
-else
-    echo "Installing p10k"
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-fi
