@@ -32,6 +32,11 @@ zinit light Aloxaf/fzf-tab
 
 autoload -U compinit && compinit -u
 
+# Customize syntax highlighting
+# Set color for correctly spelled commands to white
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main)
+ZSH_HIGHLIGHT_STYLES[arg0]="fg=white"
+
 # Key bindings
 bindkey -e
 bindkey '^[[3~' delete-char # Fix delete not working
