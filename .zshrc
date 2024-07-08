@@ -142,3 +142,6 @@ export BAT_THEME="gruvbox-dark"
 
 # Shell integrations
 # eval "$(fzf --zsh)" # uncomment if fzf version > 0.48
+
+export PAGER='less'
+export LESS='-R'
