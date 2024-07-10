@@ -77,7 +77,6 @@ alias activate="source .*venv*/bin/activate"
 alias activate..="cd .. && activate && cd -"
 alias activate...="cd ... && activate && cd -"
 alias activate....="cd .... && activate && cd -"
-alias fray="ssh vasatjos@fray1.fit.cvut.cz"
 alias compile="g++ -Wall -Wextra -pedantic -O2 "
 alias ff="cd && \fd --type f --hidden --exclude .git | fzf --preview 'bat --color=always {}' | xargs -r nvim" # Fuzzy find file and open in nvim
 alias fd='cd && cd $(\fd --type d --hidden --exclude .git | fzf --preview  "tree -LC 2 {}")' # Fuzzy find directory and cd into it
