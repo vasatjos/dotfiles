@@ -35,8 +35,6 @@ zinit cdreplay -q # increase startup times
 
 # Customize syntax highlighting
 # Set color for correctly spelled commands to white
-bindkey '^[[1;5D' backward-word  # Ctrl+Left
-bindkey '^[[1;5C' forward-word   # Ctrl+Right
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main)
 ZSH_HIGHLIGHT_STYLES[arg0]="fg=white"
 
