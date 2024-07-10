@@ -57,38 +57,6 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
-# Initialize the directory stack
-if [[ -z ${DIR_STACK+x} ]]; then
-    DIR_STACK=()
-fi
-
-cd() {
-    if [[ "$1" =~ ^-[0-9]+$ ]]; then
-        # Extract the number from the argument
-        local n=${1:1}
-        if (( n < 1 || n > ${#DIR_STACK[@]} )); then
-            echo "cd: no such entry in directory stack"
-            return 1
-        fi
-        # Get the target directory from the stack
-        local target_dir=${DIR_STACK[-n]}
-        # Shift elements in the stack to remove the target directory
-        DIR_STACK=("${DIR_STACK[@]:0:${#DIR_STACK[@]}-n}" "${DIR_STACK[@]:${#DIR_STACK[@]}-n+1}")
-        # Push the current directory to the stack
-        DIR_STACK+=("$PWD")
-        builtin cd "$target_dir"
-    else
-        # Push the current directory to the stack if it's a normal directory change
-        if [[ -d "$1" || -z "$1" ]]; then
-            DIR_STACK+=("$PWD")
-        fi
-        builtin cd "$@"
-    fi
-}
-
-# Create an alias for "cd -" to maintain compatibility
-alias -- -='cd -1'
-
 # Completion configuration
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
@@ -138,11 +106,9 @@ export NVM_DIR="$HOME/.nvm"
 # Set the theme for bat
 export BAT_THEME="gruvbox-dark"
 
-# Initialize autojump
-[[ -s /home/jvasata/.autojump/etc/profile.d/autojump.sh ]] && source /home/jvasata/.autojump/etc/profile.d/autojump.sh
-
 # Shell integrations
 # eval "$(fzf --zsh)" # uncomment if fzf version > 0.48
+eval "$(zoxide init zsh --cmd cd --hook pwd)"
 
 export PAGER='less'
 export LESS='-R'
