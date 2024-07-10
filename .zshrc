@@ -31,6 +31,7 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light Aloxaf/fzf-tab
 
 autoload -U compinit && compinit -u
+zinit cdreplay -q # increase startup times
 
 # Customize syntax highlighting
 # Set color for correctly spelled commands to white
