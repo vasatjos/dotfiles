@@ -4,4 +4,4 @@
 - Have Alacritty installed
 - Have Tmux installed
 - Have Neovim installed
-- Have autojump, fzf, fd and ripgrep installed
+- Have zoxide, fzf, fd and ripgrep installed
