@@ -35,6 +35,8 @@ zinit cdreplay -q # increase startup times
 
 # Customize syntax highlighting
 # Set color for correctly spelled commands to white
+bindkey '^[[1;5D' backward-word  # Ctrl+Left
+bindkey '^[[1;5C' forward-word   # Ctrl+Right
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main)
 ZSH_HIGHLIGHT_STYLES[arg0]="fg=white"
 
@@ -43,6 +45,8 @@ bindkey -e
 bindkey '^[[3~' delete-char # Fix delete not working
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
+bindkey '^[[1;5D' backward-word  # Ctrl+Left
+bindkey '^[[1;5C' forward-word   # Ctrl+Right
 
 # History
 HISTSIZE=10000
