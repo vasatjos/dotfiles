@@ -108,7 +108,7 @@ export NVM_DIR="$HOME/.nvm"
 export BAT_THEME="gruvbox-dark"
 
 # Shell integrations
-# eval "$(fzf --zsh)" # uncomment if fzf version > 0.48
+eval "$(fzf --zsh)" # fzf version 0.48 or newer
 eval "$(zoxide init zsh --cmd cd --hook pwd)"
 
 export PAGER='less'
