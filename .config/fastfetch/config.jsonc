@@ -67,14 +67,12 @@
             "key": "└󰍹",
             "keyColor": "blue"
         },
-        "break",
         {
-            "key": " ",
+            "padding": {
+                "left": 6
+            },
             "type": "colors",
             "symbol": "circle"
         },
-
-        //"break",
-        //"colors"
     ]
 }
