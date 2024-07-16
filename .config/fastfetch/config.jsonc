@@ -53,13 +53,13 @@
             "keyColor": "blue"
         },
         {
-            "type": "memory",
-            "key": "├󰑭",
+            "type": "uptime",
+            "key": "├󰅐",
             "keyColor": "blue"
         },
         {
-            "type": "uptime",
-            "key": "├󰅐",
+            "type": "memory",
+            "key": "├󰑭",
             "keyColor": "blue"
         },
         {
