@@ -17,3 +17,5 @@ tmux kill-server
 
 # clone nvim submodule
 git submodule update --init --recursive
+
+echo "Everything installed! Assuming the dotfiles is in your $HOME, run 'stow .' to symlink the dotfiles."
