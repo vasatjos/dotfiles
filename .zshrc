@@ -29,6 +29,7 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light Aloxaf/fzf-tab
+zinit light mdumitru/fancy-ctrl-z
 
 autoload -Uz compinit && compinit -u
 zinit cdreplay -q # increase startup times
@@ -82,7 +83,7 @@ alias activate....="cd .... && activate && cd -"
 alias compile="g++ -Wall -Wextra -pedantic -O2 "
 alias ff="cd && \fd --type f --hidden --exclude .git | fzf --preview 'bat --color=always {}' | xargs -r nvim" # Fuzzy find file and open in nvim
 alias fd='cd && cd $(\fd --type d --hidden --exclude .git | fzf --preview  "tree -LC 2 {}")' # Fuzzy find directory and cd into it
-alias td='cd && cd $(\fd --type d --hidden --exclude .git | fzf --preview "tree -LC 2 {}") && tmux' # Fuzzy find directory and start tmux session in it
+alias ft='cd && cd $(\fd --type d --hidden --exclude .git | fzf --preview "tree -LC 2 {}") && tmux' # Fuzzy find directory and start tmux session in it
 alias c="clear -x" # Since Ctrl + L doesn't work in tmux
 
 # Gnome stuff
@@ -116,3 +117,8 @@ eval "$(zoxide init zsh --cmd cd --hook pwd)"
 
 export PAGER='less'
 export LESS='-R'
+
+export td() {
+    __zoxide_z "$1" || return
+    tmux
+}
