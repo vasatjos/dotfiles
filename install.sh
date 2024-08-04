@@ -1,4 +1,4 @@
-#/bin/bash
+#/usr/bin/env bash
 
 # install tpm
 if [ -d $HOME/.tmux/plugins/tpm ]; then
