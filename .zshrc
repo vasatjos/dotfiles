@@ -74,6 +74,7 @@ alias -g ....='../../..'
 alias -g .....='../../../..'
 alias -g ......='../../../../..'
 alias l="ls -lah"
+alias cp="cp -r"
 alias v="nvim"
 alias open="xdg-open" # open something with the default application
 alias activate="source .*venv*/bin/activate"
