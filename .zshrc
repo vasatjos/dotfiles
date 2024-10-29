@@ -32,7 +32,7 @@ zinit light Aloxaf/fzf-tab
 zinit light mdumitru/fancy-ctrl-z
 
 autoload -Uz compinit && compinit -u
-zinit cdreplay -q # increase startup times
+zinit cdreplay -q
 
 # Customize syntax highlighting
 # Set color for correctly spelled commands to white
@@ -76,6 +76,7 @@ alias -g ......='../../../../..'
 alias l="ls -lah"
 alias cp="cp -r"
 alias v="nvim"
+alias t="tmux"
 alias open="xdg-open" # open something with the default application
 alias activate="source .*venv*/bin/activate"
 alias activate..="cd .. && activate && cd -"
