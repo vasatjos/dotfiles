@@ -104,6 +104,7 @@ git config --global alias.co checkout
 git config --global alias.br branch
 git config --global alias.ll 'log --oneline --graph --all --decorate'
 git config --global alias.repush "!git commit --amend --no-edit && git push --force"
+git config --global init.defaultBranch master
 
 # nvm configuration
 export NVM_DIR="$HOME/.nvm"
