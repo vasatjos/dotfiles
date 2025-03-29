@@ -1,3 +1,12 @@
+# Gnome stuff
+if [ "$XDG_CURRENT_DESKTOP" = "GNOME" ]; then
+    # Alt tab switches windows on all workspaces
+    gsettings set org.gnome.shell.window-switcher current-workspace-only false
+    # Workspace switching
+    for i in {1..9}; do gsettings set "org.gnome.desktop.wm.keybindings" "switch-to-workspace-$i" "['<Super>$i']" ; done
+    gsettings set "org.gnome.desktop.wm.keybindings" "switch-to-workspace-10" "['<Super>0']" 
+fi
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -89,12 +98,6 @@ alias fd='cd && cd $(\fd --type d --hidden --exclude .git | fzf --preview  "tree
 alias ft='cd && cd $(\fd --type d --hidden --exclude .git | fzf --preview "tree -LC 2 {}") && tmux' # Fuzzy find directory and start tmux session in it
 alias c="clear -x" # Since Ctrl + L doesn't work in tmux
 
-# Gnome stuff
-if [ "$XDG_CURRENT_DESKTOP" = "GNOME" ]; then
-    # Alt tab switches windows on all workspaces
-    gsettings set org.gnome.shell.window-switcher current-workspace-only false
-fi
-
 #Git configuration
 git config --global user.name "Josef Vasata"
 git config --global user.email vasatjos@fit.cvut.cz
@@ -121,6 +124,8 @@ eval "$(zoxide init zsh --cmd cd --hook pwd)"
 
 export PAGER='less'
 export LESS='-R'
+
+export PATH="$HOME/.local/bin:$PATH"
 
 export td() {
     __zoxide_z "$1" || return
