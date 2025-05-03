@@ -1,5 +1,8 @@
 #/usr/bin/env bash
 
+# install tooling
+sudo dnf install -y zsh zoxide fzf fd-find ripgrep nvim
+
 # install tpm
 if [ -d $HOME/.tmux/plugins/tpm ]; then
     echo "tpm already installed"
@@ -19,6 +22,8 @@ tmux kill-server
 git submodule update --init --recursive
 
 echo
-echo "Tooling installed! Assuming the dotfiles directory is in your $HOME directory, run 'stow .' to symlink the dotfiles."
+echo "Tooling installed!"
+echo "Creating symlinks with stow."
+stow -t $HOME
 echo
-echo "Make sure to also have zsh, zoxide, fzf and fd-find installed from your package manager."
+echo "Done!"
