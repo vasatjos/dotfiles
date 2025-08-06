@@ -99,8 +99,6 @@ alias ft='cd && cd $(\fd --type d --hidden --exclude .git | fzf --preview "tree 
 alias c="clear -x" # Since Ctrl + L doesn't work in tmux
 
 #Git configuration
-git config --global user.name "Josef Vasata"
-git config --global user.email vasatjos@fit.cvut.cz
 git config --global core.editor nvim
 git config --global alias.st status
 git config --global alias.ci commit
