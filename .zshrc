@@ -98,16 +98,6 @@ alias fd='cd && cd $(\fd --type d --hidden --exclude .git | fzf --preview  "tree
 alias ft='cd && cd $(\fd --type d --hidden --exclude .git | fzf --preview "tree -LC 2 {}") && tmux' # Fuzzy find directory and start tmux session in it
 alias c="clear -x" # Since Ctrl + L doesn't work in tmux
 
-#Git configuration
-git config --global core.editor nvim
-git config --global alias.st status
-git config --global alias.ci commit
-git config --global alias.co checkout
-git config --global alias.br branch
-git config --global alias.ll 'log --oneline --graph --all --decorate'
-git config --global alias.repush "!git commit --amend --no-edit && git push --force"
-git config --global init.defaultBranch master
-
 # nvm configuration
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

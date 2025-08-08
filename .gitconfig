@@ -1,0 +1,17 @@
+[user]
+	name = Josef Vasata
+	email = jvasata03@gmail.com
+[core]
+	editor = nvim
+	pager = less -R
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	ll = log --oneline --graph --all --decorate
+	repush = !git commit --amend --no-edit && git push --force
+[pager]
+	log = less -R
+[init]
+	defaultBranch = master
