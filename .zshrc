@@ -119,3 +119,12 @@ export td() {
     __zoxide_z "$1" || return
     tmux
 }
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/home/jvasata/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<
