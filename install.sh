@@ -1,7 +1,7 @@
 #/usr/bin/env bash
 
 # install tooling
-sudo dnf install -y zsh zoxide fzf fd-find ripgrep nvim
+sudo dnf install -y zsh zoxide fzf fd-find ripgrep nvim tmux
 
 # install tpm
 if [ -d $HOME/.tmux/plugins/tpm ]; then
