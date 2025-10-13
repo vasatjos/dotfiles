@@ -85,7 +85,6 @@ alias -g ......='../../../../..'
 alias l="ls -lah"
 alias cp="cp -r"
 alias v="nvim"
-alias t="tmux"
 alias open="xdg-open" # open something with the default application
 alias activate="source .*venv*/bin/activate"
 alias activate..="cd .. && activate && cd -"
@@ -128,6 +127,3 @@ path=('/home/jvasata/.juliaup/bin' $path)
 export PATH
 
 # <<< juliaup initialize <<<
-
-# To customize prompt, run `p10k configure` or edit ~/.dotfiles/.p10k.zsh.
-[[ ! -f ~/.dotfiles/.p10k.zsh ]] || source ~/.dotfiles/.p10k.zsh
