@@ -92,8 +92,7 @@ alias activate...="cd ... && activate && cd -"
 alias activate....="cd .... && activate && cd -"
 alias compile="g++ -Wall -Wextra -pedantic -O2 "
 alias compile20="g++ -Wall -Wextra -pedantic -std=c++20 -O2 "
-alias ff="cd && \fd --type f --hidden --exclude .git | fzf --preview 'bat --color=always {}' | xargs -r nvim" # Fuzzy find file and open in nvim
-alias fd='cd && cd $(\fd --type d --hidden --exclude .git | fzf --preview  "tree -LC 2 {}")' # Fuzzy find directory and cd into it
+alias ff='cd && cd $(\fd --type d --hidden --exclude .git | fzf --preview  "tree -LC 2 {}")' # Fuzzy find directory and cd into it
 alias ft='cd && cd $(\fd --type d --hidden --exclude .git | fzf --preview "tree -LC 2 {}") && tmux' # Fuzzy find directory and start tmux session in it
 alias c="clear -x" # Since Ctrl + L doesn't work in tmux
 
