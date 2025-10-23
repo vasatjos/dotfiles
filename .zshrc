@@ -118,6 +118,10 @@ export td() {
     tmux
 }
 
+export mke() {
+    mkdir "$1" && cd "$1"
+}
+
 # >>> juliaup initialize >>>
 
 # !! Contents within this block are managed by juliaup !!
