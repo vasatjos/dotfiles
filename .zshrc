@@ -95,6 +95,7 @@ alias compile20="g++ -Wall -Wextra -pedantic -std=c++20 -O2 "
 alias ff='cd && cd $(\fd --type d --hidden --exclude .git | fzf --preview  "tree -LC 2 {}")' # Fuzzy find directory and cd into it
 alias ft='cd && cd $(\fd --type d --hidden --exclude .git | fzf --preview "tree -LC 2 {}") && tmux' # Fuzzy find directory and start tmux session in it
 alias c="clear -x" # Since Ctrl + L doesn't work in tmux
+alias alphabet="printf \"abcdefghijklmnopqrstuvwxyz\nABCDEFGHIJKLMNOPQRSTUVWXYZ\n\""
 
 # nvm configuration
 export NVM_DIR="$HOME/.nvm"
