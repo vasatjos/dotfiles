@@ -1,7 +1,5 @@
 # Gnome stuff
 if [ "$XDG_CURRENT_DESKTOP" = "GNOME" ]; then
-    # Alt tab switches windows on all workspaces
-    gsettings set org.gnome.shell.window-switcher current-workspace-only false
     # Workspace switching
     for i in {1..9}; do gsettings set "org.gnome.desktop.wm.keybindings" "switch-to-workspace-$i" "['<Super>$i']" ; done
     gsettings set "org.gnome.desktop.wm.keybindings" "switch-to-workspace-10" "['<Super>0']" 
