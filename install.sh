@@ -3,6 +3,8 @@
 # install tooling
 sudo dnf install -y zsh zoxide fzf fd-find ripgrep nvim tmux
 
+curl https://sh.rustup.rs -sSf | sh  # cargo
+
 # install tpm
 if [ -d $HOME/.tmux/plugins/tpm ]; then
     echo "tpm already installed"
