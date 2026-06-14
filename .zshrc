@@ -109,6 +109,7 @@ eval "$(zoxide init zsh --cmd cd --hook pwd)"
 
 export PAGER='less'
 export LESS='-R'
+export EDITOR='nvim'
 
 export PATH="$HOME/.local/bin:$PATH"
 
@@ -129,3 +130,8 @@ path=('/home/jvasata/.juliaup/bin' $path)
 export PATH
 
 # <<< juliaup initialize <<<
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/jvasata/.local/bin:$PATH"
