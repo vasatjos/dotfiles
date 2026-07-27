@@ -19,3 +19,8 @@
 	defaultBranch = master
 [push]
 	autoSetupRemote = true
+[merge]
+    tool = nvimdiff
+[mergetool]
+    keepBackup = false
+    prompt = false
