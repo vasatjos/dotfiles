@@ -130,8 +130,11 @@ path=('/home/jvasata/.juliaup/bin' $path)
 export PATH
 
 # <<< juliaup initialize <<<
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
 
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
 
 # Added by Antigravity CLI installer
 export PATH="/home/jvasata/.local/bin:$PATH"
+
+# opencode
+export PATH=/home/jvasata/.opencode/bin:$PATH
