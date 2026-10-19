@@ -1,7 +1,8 @@
 #/usr/bin/env bash
 
 # install tooling
-sudo dnf install -y zsh zoxide fzf fd-find ripgrep nvim tmux
+sudo dnf install -y zsh zoxide fzf fd-find ripgrep nvim tmux cargo
+cargo install --locked tree-sitter-cli
 
 curl https://sh.rustup.rs -sSf | sh  # cargo
 
